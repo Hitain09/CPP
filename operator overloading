@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+class complex
+{
+public:
+    int real,imag;
+
+    friend complex operator +(complex&c1,complex&c2);
+    
+    void get()
+    {
+        cin>>real;
+        cin>>imag;
+    }
+};
+complex operator +(complex&c1,complex&c2)
+{
+    complex c3;
+    c3.real=c1.real+c2.real;
+    c3.imag=c1.imag+c2.imag;
+    return c3;
+}
+int main()
+{
+    complex c1,c2,c3;
+    c1.get();
+    c2.get();
+    c3=c1+c2;
+    cout<<c3.real<<"+i"<<c3.imag<<endl;
+}
