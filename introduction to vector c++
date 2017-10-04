@@ -1,0 +1,23 @@
+#include<vector>
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    vector <int> vect;
+    for(int i=0; i<10; i++)
+    {
+        cin>>num;
+        vect.push_back(num);
+    }
+    
+    for (int i=0; i<vect.size(); i++) {
+        cout<<vect[i]<<endl;
+    }
+    vector <int>::iterator itr=vect.begin();
+    vect.insert(itr+4,1,25);
+    vect.erase(itr+8);
+    for (int i=0; i<vect.size(); i++) {
+        cout<<vect[i]<<endl;
+    }
+}
