@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a[3],ch,i,j,temp;
+    cout<<"Enter 1 for reading 3 numbers"<<endl;
+    cout<<"Enter 2 to calculate sum"<<endl;
+    cout<<"Enter 3 to calculate avg"<<endl;
+    cout<<"Enter 4 to calculate smallest number"<<endl;
+    cout<<"Enter 5 to calculate largest number"<<endl;
+    cin>>ch;
+    switch (ch) {
+        case 1:
+            cin>>a[0]>>a[1]>>a[2];
+            break;
+        case 2:
+            cin>>a[0]>>a[1]>>a[2];
+            cout<<a[0]+a[1]+a[2];
+            break;
+        case 3:
+            cin>>a[0]>>a[1]>>a[2];
+            cout<<(a[0]+a[1]+a[2])/3;
+            break;
+        case 4:
+            cin>>a[0]>>a[1]>>a[2];
+                            for(i=0; i<2; i++)
+                            {
+                              for(j=i; j<3; j++)
+                              {
+                                    if(a[i]>=a[j])
+                              {
+                              temp=a[i];
+                              a[i]=a[j];
+                              a[j]=temp;
+                              }
+                              }
+                            }
+                              cout<<a[0];
+            break;
+        case 5:
+            cin>>a[0]>>a[1]>>a[2];
+                              for(i=0; i<2; i++)
+                              {
+                              for(j=i; j<3; j++)
+                              {
+                              if(a[i]>=a[j])
+                              {
+                              temp=a[i];
+                              a[i]=a[j];
+                              a[j]=temp;
+                              }
+                              }
+                              }
+                              cout<<a[2];
+                              break;
+            
+        default:
+            break;
+    }
+    
+}
