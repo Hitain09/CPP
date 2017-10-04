@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class test {
+    int marks;
+    int roll;
+    
+public:  void getdata() {
+            cin>>marks;
+            cin>>roll;
+        }
+    
+public: void putdata() {
+            cout<<marks;
+            cout<<roll;
+        }
+};
+
+int main() {
+    test s1,s2;
+    s1.getdata();
+    s2.getdata();
+    
+    s1.putdata();
+    s2.putdata();
+}
